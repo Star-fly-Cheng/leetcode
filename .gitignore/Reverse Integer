@@ -1,0 +1,16 @@
+class Solution(object):   
+def reverse(self, x):  
+"""        :type x: int        :rtype: int        """  
+y=list(str(x))           
+if x<0:               
+    y.pop(0)      
+y.reverse()      
+c=''          
+for i in y:     
+    c=c+i         
+c=int(c)       
+if c>2**31-1:     
+    return 0      
+if x<0:       
+    c=0-c     
+return c
